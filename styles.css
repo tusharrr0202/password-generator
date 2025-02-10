@@ -1,0 +1,126 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #2b5876, #4e4376, #ff9a9e, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Password Generator Box */
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Password Box */
+.password-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Input Field */
+input[type="text"] {
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+button:hover {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Password Strength Indicator */
+#strength {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-top: 20px;
+    background-color: #00cc66;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
